@@ -10,7 +10,7 @@ class PostsController extends AppController
     }
     public function index()
     {
-        $posts = $this->Posts->find('all');
+        $posts = $this->Posts->findByPublishedAndTitle(true, 'テストタイトル');
 
         $this->set(compact('posts'));
     }
