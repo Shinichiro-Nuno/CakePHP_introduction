@@ -8,9 +8,16 @@ class PostsController extends AppController
         parent::initialize();
         $this->viewBuilder()->setLayout('test');
     }
+
+    public $paginate = [
+        'limit' => 10,
+        'order' => [
+            'created' => 'desc']
+    ];
+
     public function index()
     {
-        $posts = $this->Posts->findByPublishedAndTitle(true, 'テストタイトル');
+        $posts = $this->paginate($this->Posts->find());
 
         $this->set(compact('posts'));
     }
