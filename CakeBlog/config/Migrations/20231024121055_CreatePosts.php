@@ -27,6 +27,11 @@ class CreatePosts extends AbstractMigration
             ->addColumn('published', 'boolean', [
                 'default' => false
             ])
+            ->addColumn('user_id', 'integer', [
+                'default' => 1,
+                'limit' => 11,
+                'null' => false
+            ])
             ->addColumn('created', 'datetime')
             ->addColumn('modified', 'datetime')
             ->create();
