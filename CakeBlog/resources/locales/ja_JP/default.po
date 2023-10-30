@@ -92,7 +92,7 @@ msgstr "削除"
 #: ./templates/Admin/Users/index.php:31
 #: ./templates/Admin/Users/view.php:12
 msgid "Are you sure you want to delete # {0}?"
-msgstr ""
+msgstr "{0}を消去してもよろしいですか？"
 
 #: ./templates/Admin/Posts/edit.php:23
 #: ./templates/Admin/Posts/view.php:11

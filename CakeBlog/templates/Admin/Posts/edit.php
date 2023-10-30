@@ -27,6 +27,10 @@
                     echo $this->Form->control('body');
                     echo $this->Form->control('published');
                     echo $this->Form->control('user_id');
+                    echo $this->Form->control('tags._ids', [
+                        'multiple' => 'checkbox',
+                        'options' => $tags
+                    ]);
                 ?>
             </fieldset>
             <?= $this->Form->button(__('Submit')) ?>
