@@ -69,7 +69,7 @@ msgstr "投稿一覧"
 
 #: ./templates/Admin/Posts/add.php:18
 msgid "Add Post"
-msgstr ""
+msgstr "投稿の追加"
 
 #: ./templates/Admin/Posts/add.php:26
 #: ./templates/Admin/Posts/edit.php:31
@@ -224,3 +224,6 @@ msgstr ""
 
 msgid "Password"
 msgstr "パスワード"
+
+msgid "User"
+msgstr "ユーザー"

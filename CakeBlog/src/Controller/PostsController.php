@@ -12,7 +12,9 @@ class PostsController extends AppController
     public $paginate = [
         'limit' => 10,
         'order' => [
-            'created' => 'desc']
+            'created' => 'desc'
+        ],
+        'contain' => 'Users'
     ];
 
     public function index()
@@ -24,7 +26,9 @@ class PostsController extends AppController
 
     public function view($id = null)
     {
-        $post = $this->Posts->get($id);
+        $post = $this->Posts->get($id, [
+            'contain' => 'Users'
+        ]);
 
         $this->set(compact('post'));
     }
